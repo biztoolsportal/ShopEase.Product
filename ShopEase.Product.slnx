@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="ShopEase.Product.Api/ShopEase.Product.Api.csproj" />
+  <Project Path="ShopEase.Product.Application/ShopEase.Product.Application.csproj" />
+  <Project Path="ShopEase.Product.Contracts/ShopEase.Product.Contracts.csproj" />
+  <Project Path="ShopEase.Product.Domain/ShopEase.Product.Domain.csproj" />
+  <Project Path="ShopEase.Product.Infrastructure/ShopEase.Product.Infrastructure.csproj" />
+</Solution>

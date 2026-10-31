@@ -1,0 +1,67 @@
+## Core .NET and Visual Studio Build Artifacts
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Log]/
+
+## Visual Studio Cache, User Settings, and Temporary Files
+.vs/
+_ReSharper*/
+*.user
+*.userosscache
+*.sln.docstates
+*.suo
+*.userprefs
+
+## Visual Studio Code
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/
+.ionide/
+
+## JetBrains Rider / IntelliJ
+.idea/
+*.sln.iml
+
+## .NET Core / .NET 5+ User Secrets and Diagnostic Tools
+.microsoft.dotnet.secret.manager/
+secrets.json
+*.local.settings.json
+
+## NuGet Packages
+*.nuget.props
+*.nuget.targets
+packages/
+project.lock.json
+project.fragment.lock.json
+
+## Testing and Code Coverage
+TestResults/
+*.tlog
+*.log
+*.coverage
+*.coveragexml
+
+## Publish and Deployment outputs
+*.azureAuth
+*.ntvs*
+*.njsproj
+*.sln.targets
+PublishOutput/
+__publishOutput/
+
+## Operating System files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
