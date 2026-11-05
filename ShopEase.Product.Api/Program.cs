@@ -26,7 +26,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-var summaries = new[]
+var WeatherForecastData = new[]
 {
     "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
 };
@@ -38,12 +38,28 @@ app.MapGet("/weatherforecast", () =>
         (
             DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
             Random.Shared.Next(-20, 55),
-            summaries[Random.Shared.Next(summaries.Length)]
+            WeatherForecastData[Random.Shared.Next(WeatherForecastData.Length)]
         ))
         .ToArray();
     return forecast;
 })
 .WithName("GetWeatherForecast");
+
+
+app.MapGet("/get-dead-code-example", () =>
+{
+   bool condition = true;
+    if (condition)
+    {
+        return "Condition is true";
+    }
+    // SonarQube Rule: csharpsquid:S2589 (Boolean expressions should not be gratuitous)
+    // SonarQube Rule: csharpsquid:S1751 (Dead code should be removed)
+    return "This code is unreachable!"; 
+})
+.WithName("GetDeadCodeExample");
+
+
 
 app.Run();
 
