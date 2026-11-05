@@ -45,6 +45,22 @@ app.MapGet("/weatherforecast", () =>
 })
 .WithName("GetWeatherForecast");
 
+
+app.MapGet("/get-dead-code-example", () =>
+{
+   bool condition = true;
+    if (condition)
+    {
+        return "Condition is true";
+    }
+    // SonarQube Rule: csharpsquid:S2589 (Boolean expressions should not be gratuitous)
+    // SonarQube Rule: csharpsquid:S1751 (Dead code should be removed)
+    return "This code is unreachable!"; 
+})
+.WithName("GetDeadCodeExample");
+
+
+
 app.Run();
 
 record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
